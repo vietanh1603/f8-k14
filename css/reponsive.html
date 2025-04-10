@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:"Berlin Sans FB Demi",sans-serif;
+    }
+    header {
+        border-bottom: 1px solid #ccc;
+    }
+    .menu li:before {
+        padding: 10px;
+        display: none;
+    }
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    img {
+        flex-shrink: 0;
+        flex-basis: 50px;
+    }
+    .menu, .dropdown {
+        display: block;
+        list-style: none;
+    }
+    .menu li {
+        padding: 10px;
+        margin-bottom: 2px;
+        background-color: blueviolet;
+    }
+    .dropdown {
+        display: none;
+    }
+    @media screen and (max-width: 600px) {
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            height: 100px;
+            width: 250px;
+            color: white;
+            text-align: left;
+
+        }
+        .menu > nav {
+
+        }
+        .menu li {
+            display: block;
+        }
+        .menu li:before {
+            display: inline-block;
+        }
+        .menu-icon {
+            display: flex;
+            font-size: 25px;
+            position: relative;
+            right: -160px;
+        }
+        .menu li:hover {
+            background-color: #bebebe;
+        }
+        .footer {
+            display: flex;
+        }
+    }
+
+</style>
+
+<body>
+<header>
+    <div class="header-container">
+
+        <img
+                alt="logo f8"
+                width="50px"
+                src="https://fullstack-nodejs.fullstack.edu.vn/assets/f8_icon.png"
+        />
+        <ul class="menu">
+            <div class="nav">
+                <li class="mdi mdi-home">Home</li>
+                <li class="mdi mdi-account">Profile
+                    Products
+                    <ul class="dropdown">
+                        <li>Phone</li>
+                        <li>Tab</li>
+                        <li>Lap</li>
+                    </ul>
+                </li>
+                <li class="mdi mdi-cart-arrow-down">Customers</li>
+                <li class="mdi mdi-message-processing">About</li>
+                <li class="mdi mdi-fire-circle "> sevices</li>
+                <li class="mdi mdi-flask-empty">vanh</li>
+                <li class="mdi mdi-account-supervisor-outline">eng</li>
+            </div>
+            <div class="footer">
+                <div class="mdi mdi-account-badge">Vanh thong thai</div>
+            </div>
+        </ul>
+        <input type="checkbox" id="toggle-menu" hidden>
+        <label for="toggle-menu" class="menu-icon mdi mdi-menu"></label>
+        <span class="sidebar"></span>
+    </div>
+
+</header>
+</body>
+</html>
