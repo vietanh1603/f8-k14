@@ -1,0 +1,35 @@
+.banner {
+    background-image: url('banner.jpg');
+    height: 615px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.invitation {
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 991px){
+    .banner {
+        background-image: url("anhtable.jpg");
+    }
+    .invitation {
+        width: 100%;
+        left: 0;
+        top: 0;
+        transform: inherit;
+    }
+}
+@media screen and (max-width: 768px) {
+    .banner {
+        background-image: url("mobile.jpg");
+    }
+}
