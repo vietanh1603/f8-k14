@@ -17,6 +17,9 @@ body {
 .primary-color {
     color: #9ec2bb;
 }
+.red-color {
+    color: red;
+}
 /*padding thuong la boi cua 4
 vd 4px 8px 12px 16px
 pa-1:4px
@@ -71,5 +74,7 @@ pa-3:16px
     flex-basis: 50%;
 }
 @media screen and (max-width: 768px){
-
+    .flex-basic-50-percent {
+        flex-basis: 100%;
+    }
 }

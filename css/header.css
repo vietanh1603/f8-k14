@@ -17,6 +17,9 @@ header nav ul li a {
 }
 @media screen and (max-width:600px) {
     .menu-icon {
-        display:block;
+        display:inline-block;
+    }
+    header nav {
+        display: none;
     }
 }
