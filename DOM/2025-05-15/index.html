@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    input, button {
+        font-size: 26px;
+        padding: 20px;
+    }
+</style>
+
+<body>
+<label for="name">
+    <input type="text" placeholder="Enter your name" name="name" id="name">
+    <button>Get value</button>
+</label>
+<span></span>
+<script>
+   // document.writeln(`Hello`);
+
+    let inputE = document.querySelector('input[name = "name"]');
+    const buttonE = document.querySelector('button');
+    const spanE = document.querySelector('span');
+    // them su kien click cho button
+    buttonE.addEventListener('click', () => {
+        // console.log(inputE.value);
+        let val = inputE.value.replaceAll("<" ,"&lt;");
+        val = val.replaceAll(">" ,"&gt;");
+        spanE.innerHTML = val;
+    })
+    // tao su kien cho input
+    // inputE.addEventListener('input', (e) => {
+    //     console.log(e.target.value);
+    //
+    // })
+</script>
+
+</body>
+</html>
